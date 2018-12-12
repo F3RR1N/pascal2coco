@@ -8,7 +8,7 @@ def load_load_image_labels(LABEL_PATH, class_name=[]):
     type="instances"
     annotations=[]
     #assign your categories which contain the classname and calss id
-    #the order must be same with the class_nmae
+    #the order must be same as the class_nmae
     categories = [
 		{
 			"id" : 1,
@@ -71,7 +71,7 @@ if __name__=='__main__':
     classes=['background','add your class name']
 
     label_dict = load_load_image_labels(LABEL_PATH,classes)
-    jsonfile='/home/xxx/train.json'#the json file which you want to save the coco format annotations
+    jsonfile='/home/xxx/train.json'#location where you would like to save the coco format annotations
     with open('/home/wjl/DataSet/707dataset/label/train.json','w') as json_file:
         json_file.write(json.dumps(label_dict, ensure_ascii=False))
         json_file.close()
